@@ -1,0 +1,30 @@
+# Define a function to specify laptop features
+def laptop_specs(ram, cpu, antivirus=False):  # `antivirus` is optional and defaults to False
+    # Print the specifications of the laptop
+    print("The laptop will have the following features:")
+    print("RAM: " + ram)  # Display the RAM
+    print("CPU: " + cpu)  # Display the CPU
+    # Check if antivirus is included
+    if antivirus == True:
+        print("You also bought an antivirus!")  # Notify that antivirus is included
+    else:
+        print("You did not buy an antivirus.")  # Notify that antivirus is not included
+
+# Call the function with example inputs
+laptop_specs("8GB", "i8", antivirus=False) 
+
+# Define a function to evaluate the performance of the computer based on its power consumption
+def laptop_power(wattage):
+    # Check if wattage is within the "decent" range
+    if wattage >= 20 and wattage <= 30:
+        print("You have a decent computer.")
+    # Check if wattage is within the "low-performance" range
+    elif wattage <= 10 and wattage >= 3:
+        print("You have a low-performance computer.")
+    # Any other wattage implies a high-performance computer
+    else:
+        print("You have a high-performance computer.")
+    return wattage  # Return the wattage value for potential further use
+
+# Call the function with an example input
+laptop_power(80)
